@@ -1,0 +1,17 @@
+screenPlay/questions/ResultsCellphones.class
+screenPlay/ui/FPT_Shop_Home_Page.class
+screenPlay/tasks/User_Search_Mobile$SearchItemBuilder.class
+screenPlay/tasks/Open_Cellphones_Home_Page.class
+screenPlay/ui/CellPhones_Home_Page.class
+screenPlay/tasks/User_Search_Mobile$Locations.class
+screenPlay/tasks/User_Search_Mobile.class
+screenPlay/questions/ResultsFPTShop$Get_Info_All_Items.class
+screenPlay/tasks/User_Searches_Product_On_FPT_Shop$Types.class
+screenPlay/features/CompareResults.class
+screenPlay/questions/ResultsFPTShop.class
+screenPlay/tasks/Open_FPT_Shop_Home_Page.class
+screenPlay/tasks/User_Searches_Product_On_FPT_Shop.class
+screenPlay/tasks/User_Searches_Product_On_FPT_Shop$SearchItemOnFPTShopBuilder.class
+screenPlay/abilities/ProductInfo.class
+screenPlay/abilities/ProductInfo$ProductInfoBuilder.class
+screenPlay/questions/ResultsCellphones$Get_Info_All_Product.class

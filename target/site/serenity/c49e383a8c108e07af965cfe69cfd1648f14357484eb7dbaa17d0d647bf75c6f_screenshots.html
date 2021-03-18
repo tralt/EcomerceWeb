@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Demo Project using Serenity Screenplay and JUnit</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="384ad60d9bd462dae45b21e6103cbeee53b7e009b941ad5dbfb3477f3295a986.html">Compare Results</a></span>
+                > <span class="truncate-60"><a
+                    href="c49e383a8c108e07af965cfe69cfd1648f14357484eb7dbaa17d0d647bf75c6f.html">Compare results between cellphones and FPT shop </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 17-03-2021 21:35</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Compare Results</span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="96088640214654ea345051ba2dd3fd7ef85427a5182f80ce3ba927e5ab0a73ad.html">Compare Result
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Compare results between cellphones and FPT shop
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0f78d602b2cc80437d83360d520b4ee150a012545a4451706ce9c7719addfe3a.png" title=" Tra OPENS THE CELLPHONES HOME PAGE" width="2880"/>
+                <img src="0f78d602b2cc80437d83360d520b4ee150a012545a4451706ce9c7719addfe3a.png" title=" Tra opens the Cell phones home page" width="2880"/>
+                <img src="1452357b93dd7cb892a32ec70ceaf1c79d4967d8ea50872ac35f09a2137fafdb.png" title=" Tra OPENS THE CELLPHONES HOME PAGE (completed)" width="2880"/>
+                <img src="f24ab8d7bb4d36122f023249cd46cf2f54bbd094585472e6aa7000d9cd7a29f8.png" title=" Tra searches mobile with name as 'iphone 11' at the 'locations' city" width="2880"/>
+                <img src="f24ab8d7bb4d36122f023249cd46cf2f54bbd094585472e6aa7000d9cd7a29f8.png" title=" Tra clicks on The Location Dropdown" width="2880"/>
+                <img src="0739c2cc5e77671c0725b32c0e74958046394e2f8a5c872f76f0e417fed9dc94.png" title=" Tra clicks on The Location Dropdown (completed)" width="2880"/>
+                <img src="0739c2cc5e77671c0725b32c0e74958046394e2f8a5c872f76f0e417fed9dc94.png" title=" Tra clicks on Ha Noi" width="2880"/>
+                <img src="bb91989a9c8987356ac94ad61902e6968769ae1ac56a9331c723e99204ec04a5.png" title=" Tra clicks on Ha Noi (completed)" width="2880"/>
+                <img src="bb91989a9c8987356ac94ad61902e6968769ae1ac56a9331c723e99204ec04a5.png" title=" Tra enters 'iphone 11' then hits [ENTER] into The Search box" width="2880"/>
+                <img src="7fd4291774e73c2d510df1bc276ba62e3c26fec87f03518ac52932d58565e859.png" title=" Tra enters 'iphone 11' then hits [ENTER] into The Search box (completed)" width="2880"/>
+                <img src="c186359b871c1dd40b9e2f4191939ba9bd419eb66bb539c18854010e065bf6b8.png" title=" Tra searches mobile with name as 'iphone 11' at the 'locations' city (completed)" width="2880"/>
+                <img src="784ecf00c6a3d15d40b844f42fadf2d342016f4fae5b72f24d8fba41a8763c21.png" title=" Tra opens FPT Shop Home page" width="2880"/>
+                <img src="784ecf00c6a3d15d40b844f42fadf2d342016f4fae5b72f24d8fba41a8763c21.png" title=" Tra opens the Fpt shop home page" width="2880"/>
+                <img src="9210a65ea91b4a01008665c5ac9a99da80dc354f988529f76d219299dd001a5a.png" title=" Tra opens the Fpt shop home page (completed)" width="2880"/>
+                <img src="9210a65ea91b4a01008665c5ac9a99da80dc354f988529f76d219299dd001a5a.png" title=" Tra opens FPT Shop Home page (completed)" width="2880"/>
+                <img src="476db24a09a6e9ed86d7090047223cd7d981e7c2d3c78a86757f7465f4aedcd6.png" title=" Tra searches products on the FPT Shop with category as 'dien_thoai' and term as 'iphone 11'" width="2880"/>
+                <img src="476db24a09a6e9ed86d7090047223cd7d981e7c2d3c78a86757f7465f4aedcd6.png" title=" Tra clicks on Category: Dien Thoai" width="2880"/>
+                <img src="476db24a09a6e9ed86d7090047223cd7d981e7c2d3c78a86757f7465f4aedcd6.png" title=" Tra enters 'iphone 11' then hits [ENTER] into Search Box" width="2880"/>
+                <img src="9ca233dd0b1c7733db6c4a404b73d06aa97b48eaf8cb027a5d9f29f7757a6156.png" title=" Tra enters 'iphone 11' then hits [ENTER] into Search Box (completed)" width="2880"/>
+                <img src="d12f32da10cd9c4bfa17fcc66c1e39fe3374a17a70637f6643a6703926bda3e2.png" title=" Tra searches products on the FPT Shop with category as 'dien_thoai' and term as 'iphone 11' (completed): <span class='success-color'>SUCCESS</span>" width="2880"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.3.2</span>
+</div>
+</body>
+</html>
